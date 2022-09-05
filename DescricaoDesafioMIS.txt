@@ -1,0 +1,33 @@
+Descrição Desafio MIS
+
+Exercício SQL:
+
+Existe um banco de dados chamado "db_Consoles", criado em Microsoft SQL Server, que necessita da importação de dois arquivos CSV e análise dos dados importados. O IP do servidor do banco de dados é 123.456.789 e as credenciais para acesso são: usuário "mis", senha "tK59#q". Você deve criar duas tabelas de dados no banco existente, uma para cada um dos arquivos CSV, nomeando as tabelas conforme os nomes dos arquivos. Os arquivos estão localizados no servidor no caminho "C:\Users\MIS\CSVs". Após criadas as tabelas e importados os dados, as seguintes consultas devem escritas:
+
+Query 1: Retornar o primeiro console (Platform) a ser lançado, segundo o campo "FirstRetailAvailability" e trazendo também o campo "Discontinued". Além disso, trazer os três jogos mais recentes lançados segundo a coluna "Year", juntamente com os campos "Name", "Genre" e "Publisher".
+Query 2: Retornar somente os jogos (Name) em comum entre os consoles "PSP" e "PC".
+Query 3: Retornar o ano mais antigo e o ano mais recente, da coluna "Year", por console. A query deve renomear o campo "Platform" como "Console", o ano mais antigo como "Primeiro_lancamento" e ano mais recente como "Ultimo_lancamento".
+Query 4: Retornar o total de vendas (colunas "_Sales") de cada região ("NA", "EU", "JP" e "Other") em quatro campos distintos, por gênero de jogo (Genre). Além disso, retornar também um campo nomeado "Total_Sales" com as vendas somadas de todas as regiões e ordenar esse campo de forma decrescente.
+Query 5: Retornar apenas os jogos de console "PSP" que não foram lançados em nenhum outro console.
+
+As consultas devem ser escritas na aba "ExercicioSQL", seguindo as indicações na própria aba.
+
+Exercício VBA:
+
+Os arquivos CSV devem ser importados nas abas homônimas no arquivo "DesafioMIS", utilizando ou ferramenta de PowerQuery do Excel ou o próprio VBA. Caso opte-se pelo VBA, a macro de importação deve ser nomeada "Sub_Importacao". Após importação dos dados, trazer os resultados solicitados na aba "ExercicioVBA", utilizando as células coloridas de verde como parâmetros de entrada de cada macro e preenchendo os resultados solicitados abaixo das células coloridas de amarelo. Qualquer variável extra que julgar necessária no funcionamento das macros pode ser cadastrada na aba "Auxiliar_ExercicioVBA". As orientações abaixo devem ser seguidas para cada macro e cada uma deve ser salva no arquivo "DesafioMIS" conforme os nomes de cada item:
+
+Macro1: Incluir uma lista de Validação de Dados com os nomes de consoles (Platform) na célula ao lado de "Console:". A macro deve buscar a data de lançamento (FirstRetailAvailability) e a data de descontinuação (Discontinued), se existir, para o console filtrado na lista e preencher abaixo das colunas do "Resultado 1". Além disso, buscar todos os jogos (Name) e respectivos "Year", "Genre" e "Publisher" para o mesmo console e preencher abaixo das colunas do "Resultado 2". 
+Macro2: A macro deve buscar somente os nomes de jogos comuns entre o "Console 1" e o Console 2" e preencher na coluna abaixo de "Resultado".
+Macro3: A macro deve buscar o ano mais antigo e o ano mais recente da coluna "Year" do console filtrado, preenchendo respectivamente abaixo das colunas "Primeiro_lancamento" e "Ultimo_lancamento".
+Macro4: A macro deve buscar somente os gêneros (Genre) de jogos do console filtrado e somar as colunas de "_Sales" por gênero e preencher abaixo das colunas homônimas.
+Macro5: A macro deve buscar apenas os jogos do console filtrado e que não foram lançados em nenhum outro console.
+
+Exercícios extras:
+
+Criar uma conexão com o banco de dados do SQL usando o VBA e utilizar o VBA para retornar as consultas do exercício de SQL nas abas ocultas "VBA_SQL_Query" de 1 a 5. Cada consulta deve ser retornada na célula A1 da sua respectiva aba.
+Criar uma macro nomeada "Sub_PDF", que gera um PDF apenas dos resultados da Macro 4 da aba "ExercicioVBA".
+Criar uma macro nomeada "Sub_XLSX", que gera um Excel sem macros, apenas dos resultados da Macro 4 da aba "ExercicioVBA".
+Criar uma macro nomeada "Sub_Envio", que gera um e-mail para teste@teste.com, em cópia para testecc@teste.com, título "Resultado Macro 4" e anexa o PDF e XLSX criados nos items anteriores.
+
+
+
